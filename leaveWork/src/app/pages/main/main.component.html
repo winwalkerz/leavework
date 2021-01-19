@@ -39,6 +39,11 @@
     </nz-header>
     <nz-content>
       <div class="inner-content">
+        <div>
+          <button nz-button nzType="primary" nzSize="large" nzShape="round" (click)="addLeave()">
+            <i nz-icon nzType="plus-circle" nzTheme="outline"></i>ทำเรื่องขอลา!
+          </button>
+        </div>
         <div nz-row>
           <nz-table [nzData]="data" nzShowPagination="false">
             <thead>
@@ -52,9 +57,25 @@
             </thead>
             <tbody>
               <tr *ngFor="let value of data">
-                <td>{{value.fullname}}</td>
-                <td>{{value.email}}</td>
-                <td> {{value.date}}</td>
+                <td>{{ value.fullname }}</td>
+                <td>{{ value.email }}</td>
+                <td>{{ value.date }}</td>
+                <td>
+                  <div *ngIf="value.type == 'ลาป่วย'">
+                    <p style="text-align: center">ลาป่วย</p>
+                  </div>
+                  <div *ngIf="value.type == 'ลากิจ'">
+                    <p style="text-align: center">ลากิจ</p>
+                  </div>
+                </td>
+                <td>
+                  <div *ngIf="value.status == '1'">
+                    <p style="text-align: center">อนุมัติ</p>
+                  </div>
+                  <div *ngIf="value.status == '2'">
+                    <p style="text-align: center">ยังไม่อนุมัติ</p>
+                  </div>
+                </td>
               </tr>
             </tbody>
           </nz-table>

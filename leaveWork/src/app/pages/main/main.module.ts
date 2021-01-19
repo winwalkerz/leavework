@@ -12,7 +12,8 @@ import { NzMenuModule } from 'ng-zorro-antd/menu'; //ต้องลงตัว
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzTableModule } from 'ng-zorro-antd/table';
-
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { AddLeaveModule } from '../../components/add-leave/add-leave.module';
 
 @NgModule({
   declarations: [MainComponent],
@@ -28,6 +29,8 @@ import { NzTableModule } from 'ng-zorro-antd/table';
     NzIconModule,
     NzGridModule,
     NzTableModule,
+    NzButtonModule,
+    AddLeaveModule,
   ]
 })
 export class MainModule { }
