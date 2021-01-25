@@ -1,8 +1,12 @@
-<button nz-button nzType="primary" (click)="open()">Open</button>
-<nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzTitle="Basic Drawer" (nzOnClose)="close()">
-  <ng-container *nzDrawerContent>
-    <p>Some contents...</p>
-    <p>Some contents...</p>
-    <p>Some contents...</p>
-  </ng-container>
-</nz-drawer>
+<div nz-row>
+  <div nz-col nzSpan="8">
+    <span>ชื่อ - นามสกุล</span>
+  </div>
+  <div nz-col nzSpan="8">
+    <input
+      nz-input
+      [(ngModel)]="valueCreate.fullname"
+      [disabled]="true"
+    />
+  </div>
+</div>

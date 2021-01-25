@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-add-leave',
   templateUrl: './add-leave.component.html',
-  styleUrls: ['./add-leave.component.css']
+  styleUrls: ['./add-leave.component.css'],
 })
 export class AddLeaveComponent implements OnInit {
-
+  // @Input() data: any; //ตัวแปลสำหรับรับข้อมูลจาก mockupAPI
   visible = false;
-
+  valueCreate = {
+    fullname: '',
+  };
   open(): void {
     this.visible = true;
   }
@@ -16,10 +18,8 @@ export class AddLeaveComponent implements OnInit {
   close(): void {
     this.visible = false;
   }
-  
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

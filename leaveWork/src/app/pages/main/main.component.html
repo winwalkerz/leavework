@@ -39,10 +39,28 @@
     </nz-header>
     <nz-content>
       <div class="inner-content">
-        <div>
-          <button nz-button nzType="primary" nzSize="large" nzShape="round" (click)="addLeave()">
-            <i nz-icon nzType="plus-circle" nzTheme="outline"></i>ทำเรื่องขอลา!
-          </button>
+        <div nz-row nzJustify="end">
+          <div nz-col="4">
+            <div>
+              <button nz-button nzSize="large" style="margin-right: 10px;">
+                <span>Calender</span>
+              <i nz-icon nzType="calendar" nzTheme="outline"></i>
+              </button>
+              
+            </div>
+          </div>
+          <div nz-col nzSpan="4">
+            <button
+              nz-button
+              nzType="primary"
+              nzSize="large"
+              nzShape="round"
+              (click)="addLeave()"
+            >
+              <i nz-icon nzType="plus-circle" nzTheme="outline"></i
+              >ทำเรื่องขอลา!
+            </button>
+          </div>
         </div>
         <div nz-row>
           <nz-table [nzData]="data" nzShowPagination="false">

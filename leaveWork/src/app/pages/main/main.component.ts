@@ -20,6 +20,11 @@ export class MainComponent implements OnInit {
     const drawRef = this.nzDrawerService.create<AddLeaveComponent>({
       nzTitle: 'เพิ่มรายการลางาน',
       nzContent: AddLeaveComponent,
+      nzWidth: '65%',
+    });
+
+    drawRef.afterClose.subscribe(() => {
+      this.showData();
     });
   }
 

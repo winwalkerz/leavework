@@ -14,6 +14,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { AddLeaveModule } from '../../components/add-leave/add-leave.module';
+import { CalenerModule } from '../../components/calener/calener.module';
 
 @NgModule({
   declarations: [MainComponent],
@@ -31,6 +32,7 @@ import { AddLeaveModule } from '../../components/add-leave/add-leave.module';
     NzTableModule,
     NzButtonModule,
     AddLeaveModule,
+    CalenerModule,
   ]
 })
 export class MainModule { }
