@@ -11,6 +11,7 @@ import { NzDrawerService, NzDrawerRef } from 'ng-zorro-antd/drawer'; //import se
 export class MainComponent implements OnInit {
   isCollapsed = false;
   data: any;
+  value='';
   constructor(
     private crud: CrudService,
     private nzDrawerService: NzDrawerService //ประกาศตัวแปลเพื่อมาใช้งาน
@@ -27,9 +28,13 @@ export class MainComponent implements OnInit {
       this.showData();
     });
   }
-
+  search(){
+    this.crud.show(this.value).then((res:any) => {
+      this.data = res;
+    })
+  }
   ngOnInit(): void {
-    this.showData();
+    // this.showData();
   }
 
   showData() {
